@@ -1,7 +1,7 @@
 {
-  "name": "react-routing",
+  "name": "erm-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "A noddy React app - how do you even React?",
   "main": "app.js",
   "dependencies": {    
     "react": "^15.0.2",
@@ -16,6 +16,6 @@
     "build": "browserify -t [ babelify ] src/app.js -o src/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Joe Lloyd",
+  "license": "MIT"
 }
