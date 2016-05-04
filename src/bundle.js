@@ -19491,11 +19491,13 @@ module.exports = require('./lib/React');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Item = require('./components/Item.jsx');
+var ItemTable = require('./components/ItemTable.jsx');
 
-ReactDOM.render(React.createElement(Item, { description: 'Pineapple' }), document.getElementById('content'));
+var items = { "data": [{ "description": "Pineapple" }, { "description": "Badger" }] };
 
-},{"./components/Item.jsx":169,"react":167,"react-dom":2}],169:[function(require,module,exports){
+ReactDOM.render(React.createElement(ItemTable, { items: items }), document.getElementById('content'));
+
+},{"./components/ItemTable.jsx":169,"react":167,"react-dom":2}],169:[function(require,module,exports){
 
 var React = require('react');
 
@@ -19504,9 +19506,34 @@ module.exports = React.createClass({
 
 	render: function () {
 		return React.createElement(
-			'h1',
+			'table',
 			null,
-			this.props.description
+			React.createElement(
+				'thead',
+				null,
+				React.createElement(
+					'tr',
+					null,
+					React.createElement(
+						'th',
+						null,
+						'Description'
+					)
+				)
+			),
+			React.createElement(
+				'tbody',
+				null,
+				React.createElement(
+					'tr',
+					null,
+					React.createElement(
+						'td',
+						null,
+						'Pineapple'
+					)
+				)
+			)
 		);
 	}
 });

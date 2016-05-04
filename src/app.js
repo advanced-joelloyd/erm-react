@@ -2,10 +2,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Item = require('./components/Item.jsx');
 
+var ItemTable = require('./components/ItemTable.jsx');
+
+var items = {"data": [
+				{ "description": "Pineapple" },
+				{ "description": "Badger" }
+			]};
 
 ReactDOM.render(
-	<Item description="Pineapple" />, 
+	<ItemTable items={items} />, 
 	document.getElementById('content'));
 
