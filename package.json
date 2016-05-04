@@ -15,7 +15,8 @@
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "build": "watchify -v -t [ babelify ] src/app.js -o src/bundle.js",
+    "build:dev": "browserify -v -t [ babelify ] src/app.js -o src/bundle.js",
+    "build:watch": "watchify -v -t [ babelify ] src/app.js -o src/bundle.js",
     "build:release": "browserify -v -t [ babelify ] src/app.js | uglifyjs > src/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
