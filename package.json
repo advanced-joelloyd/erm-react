@@ -1,7 +1,7 @@
 {
   "name": "erm-react",
   "version": "1.0.0",
-  "description": "A noddy React app - how do you even React?",
+  "description": "A noddy React app",
   "main": "app.js",
   "dependencies": {
     "react": "^15.0.2",
@@ -21,5 +21,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joe Lloyd",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/advanced-joelloyd/erm-react"
+  }
 }
