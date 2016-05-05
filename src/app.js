@@ -1,9 +1,12 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
 
 
 var Debts = require('./components/DebtsTable.jsx');
+var DebtOverview = require('./components/DebtOverview.jsx');
 
 var items = {"data": [
 				{ "ref": "A00001-0001", "outstandingDebt": 100.0, "description": "De Debt -V- Mr Jim Jones" },
@@ -12,6 +15,9 @@ var items = {"data": [
 			]};
 
 ReactDOM.render(
-	<Debts items={items} />, 
+	(<Router>
+		<Route path="/" component={Debts} />
+		<Route path="/overview" component={DebtOverview} />
+	</Router>), 
 	document.getElementById('content'));
 
