@@ -27,6 +27,6 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-	<App/>, 
+	<DebtOverview/>, 
 	document.getElementById('content'));
 
