@@ -15,10 +15,17 @@ var items = {"data": [
 				{ "ref": "B00001-0013", "outstandingDebt": 3.0, "description": "De Debt -V- Mrs Denise Jackson" }
 			]};
 
+
+var DebtsWrapper = React.createClass({
+	render: function() {
+		return <Debts items={items} />
+	}
+});
+
 ReactDOM.render(
 	(<Router history={hashHistory}>
-		<Route path="/" component={Debts} />
-		<Route path="/overview" component={DebtOverview} />
+		<Route path="/" component={DebtsWrapper} />
+		<Route path="/overview/:reference" component={DebtOverview} />
 	</Router>), 
 	document.getElementById('content'));
 
